@@ -2,7 +2,7 @@
 
 It is a project structure for building node js application with mvc pattern.
 
-## Installatiion Process
+## Installation Process
 
 - Clone project from this repository.
 - Open terminal for this project.
