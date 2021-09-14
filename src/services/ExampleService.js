@@ -1,11 +1,13 @@
 // Add bussiness logic here
 
-const example = require('../models/Example')
-function getInformation() {
-    let data = example.getInformation();
-    if(data.id == 1) return data;
+const { User } = require('../models');
+
+async function processAllUser(req, res) {
+    let data = await User.findAll({raw:true});
+    return data;
+    
 }
 
 module.exports = {
-    getInformation: getInformation
+    processAllUser: processAllUser
 }

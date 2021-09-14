@@ -1,13 +1,13 @@
 //Controller for the routes
 
 const exampleService = require('../services/ExampleService')
+const models = require('../models');
 
-function getInformation(req, res) {
-    let data =  exampleService.getInformation();
-    if(!data) return res.status(400).json({'error': 'No data found!'});
-    return res.status(200).json({'data': data});
+function processAllUser(req, res) {
+    exampleService.processAllUser()
+    .then(result => res.json({'data':result}));
 }
 
 module.exports = {
-    getInformation: getInformation
+    processAllUser: processAllUser
 }
